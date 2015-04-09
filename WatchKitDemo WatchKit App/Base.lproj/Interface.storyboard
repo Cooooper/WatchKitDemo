@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKitDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="132" height="35" alignment="left" verticalAlignment="center" text="Your guess is：3" id="M9b-EC-CaQ"/>
+                        <button width="1" alignment="left" verticalAlignment="center" title="Guess" id="8ni-4R-UX3">
+                            <connections>
+                                <action selector="startGuess" destination="AgC-eL-Hgc" id="6GC-DR-o5Y"/>
+                            </connections>
+                        </button>
+                        <label width="136" alignment="left" verticalAlignment="bottom" text="Press Guess to play" minimumScaleFactor="0.5" id="GK3-qH-XxA"/>
+                        <slider width="1" alignment="left" value="0.59999999999999998" steps="5" id="2x7-Sv-h5V">
+                            <connections>
+                                <action selector="updateGuess:" destination="AgC-eL-Hgc" id="z2y-J7-FLV"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="guessLabel" destination="M9b-EC-CaQ" id="hfw-5x-MaR"/>
+                        <outlet property="guessSlider" destination="2x7-Sv-h5V" id="H37-Tb-O2l"/>
+                        <outlet property="resultLabel" destination="GK3-qH-XxA" id="29t-hJ-v7Z"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
